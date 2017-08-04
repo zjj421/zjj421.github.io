@@ -17,7 +17,7 @@ titlename: Archive
     <li>
       <a class="pjaxlink" href="{{ post.url }}"> {{ post.date | date: "%Y-%m-%d" }} {{ post.title }}</a>
     </li>
-  
+
     {% if forloop.last %}
     {% else %}
       {% if this_year != next_year %}
