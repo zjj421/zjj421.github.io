@@ -4,16 +4,16 @@ paginate: 10
 markdown: kramdown
 
 # Author
-author: 
-  name: Terry Chen Nan
-  email: ichennan@sina.com
-  link: http://ichennan.github.io
-  github: http://github.com/ichennan
+author:
+  name: Michael Zhang
+  email: zjj421work@163.com
+  link: http://zjj421.github.io
+  github: http://github.com/zjj421
 
 # Site
-title: Ichennan
-description: Blog of Terry Chen Nan
-url: http://ichennan.github.io
+title: Michael Zhang
+description: Blog of Michael Zhang
+url: http://zjj421.github.io
 rss_url: /pages/atom.xml
 
 # gavatar Favicon
@@ -22,7 +22,7 @@ favicon: /public/img/deer3.png
 
 # google analytics
 ga:
-  id: UA-54262064-1 
+  id: UA-54262064-1
   url: ichennan.github.io
 
 # default active
