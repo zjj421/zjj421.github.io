@@ -1,0 +1,15 @@
+---
+layout: post
+title: ubuntu16.04连接AWS EC2
+category: Linux
+tags: Linux
+keywords:
+description:
+---
+
+# ubuntu16.04连接AWS EC2
+
+## 密钥必须不公开可见，SSH 才能工作。修改私钥权限为400
+ 	chmod 400 AWS_EC2.pem
+## 连接
+ 	ssh -i *.pem “username@ip”
