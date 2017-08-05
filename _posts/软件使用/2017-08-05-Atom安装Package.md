@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Ubuntu16.04 安装最新版node.js
+title: Atom简单使用
 category: 软件使用
 tags: 软件使用
 keywords:
 description:
 ---
-
 
 # Atom简单使用
 ## 一、 Atom安装package
