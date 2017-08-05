@@ -1,3 +1,13 @@
+---
+layout: post
+title: Ubuntu16.04 安装最新版node.js
+category: 软件使用
+tags: 软件使用
+keywords:
+description:
+---
+
+
 # Atom简单使用
 ## 一、 Atom安装package
   1. 进[官网](https://atom.io/packages)搜索对应的包
@@ -5,4 +15,3 @@
   3. git clone +地址
   4. 进入下载的包里
   5. apm install
- 
