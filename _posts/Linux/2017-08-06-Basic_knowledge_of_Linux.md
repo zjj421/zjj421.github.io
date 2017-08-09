@@ -7,7 +7,6 @@ keywords:
 description:
 ---
 
-# Baseic knowledge of Linux
 ## 安装软件
 
 * .deb
@@ -28,6 +27,7 @@ description:
     给file1创建了一个硬链接fiel1_hardlink，２个文件的内容是关联的，修改其中任何一个文件的内容，另一个文件也会跟着被修改，２个文件的大小一样。但是删除某一个文件并不会影响另一个文件。
 
 ２. 软链接（soft link）
+
     ln -s file2 file2_softlink
     同样２个文件是关联的，与硬链接不同的是，软链接文件的大小为０，删除或移动原文件会影响软链接文件。
 
@@ -35,15 +35,15 @@ description:
 
 ## 设置程序开机自启
 
-　　方法有很多，这里只记录其中一种：
+方法有很多，这里只记录其中一种：
 
     1. sudo vim /etc/rc.local
     2. 在exit 0之前添加想在开机时运行的命令
     3. 如果想以指定用户运行某个命令: sudo -u username <cmd>
 
-## 终端使用代理
+## 终端使用socks5代理
 
-###　配置：
+### 配置：
 
     1. sudo apt install polipo
     2. sudo vim /etc/polipo/config
@@ -63,5 +63,30 @@ description:
         alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost:8123".
     3. 以代理方式运行某条命令，只需在其前面加上ss就可以了。
         例如：ss curl ip.gs　(显示当前ip的详细信息。)
+
+### git需要重新配置代理
+
+    1. socks5代理：
+        git config --global http.proxy 'socks5://127.0.0.1:1080'
+        git config --global https.proxy 'socks5://127.0.0.1:1080'
+
+    2. http代理：
+        git config --global http.proxy https://127.0.0.1:1080
+        git config --global https.proxy https://127.0.0.1:1080
+
+    3. 取消：
+        git config --global --unset http.proxy
+        git config --global --unset https.proxy
+
+### pip配置代理
+
+    1. vim ~/.bashrc
+    2. 最后一行加上：
+        alias pip="pip --proxy 127.0.0.1:8123"
+    3. source ~/.bashrc
+
+
+
+
 
 未完待续

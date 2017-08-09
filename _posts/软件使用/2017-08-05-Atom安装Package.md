@@ -7,7 +7,6 @@ keywords:
 description:
 ---
 
-# Atom简单使用
 ## 一、 Atom安装package
   1. 进[官网](https://atom.io/packages)搜索对应的包
   2. 转到对应包的github地址，复制地址
