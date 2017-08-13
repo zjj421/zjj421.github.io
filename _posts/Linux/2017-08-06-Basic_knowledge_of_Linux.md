@@ -7,7 +7,7 @@ keywords:
 description:
 ---
 
-## 安装软件
+## 一、安装软件
 
 * .deb
   * 安装软件：sudo dpkg -i ****.deb
@@ -17,7 +17,7 @@ description:
   * 安装：sudo apt install <package_name>
   * 卸载：sudo apt --purge remove <package_name>
 
-## 硬链接和软链接（符号链接）的区别
+## 二、硬链接和软链接（符号链接）的区别
 
 ![hard_and_soft_link](assets/markdown-img-paste-20170807204239791.png)
 
@@ -35,7 +35,7 @@ description:
 
 ３. 此处只做了简单区分，[参考自这里](https://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link)。
 
-## 设置程序开机自启
+## 三、设置程序开机自启
 
 方法有很多，这里只记录其中一种：
 
@@ -43,7 +43,7 @@ description:
     2. 在exit 0之前添加想在开机时运行的命令
     3. 如果想以指定用户运行某个命令: sudo -u username <cmd>
 
-## 终端使用socks5代理
+## 四、终端使用socks5代理
 
 ### 配置：
 
@@ -98,7 +98,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 ```
 3. source ~/.bashrc
 
-### ubuntu和windows共享文件系统（永久）
+##　五、ubuntu和windows共享文件系统（永久）
 
 1. sudo fdisk -l 查看想要挂载的分区的设备号，如/dev/sdb1
 2. sudo vim /etc/fstab 在最后一行添加自己想要挂载的设备号，如：
@@ -107,8 +107,45 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 ```    
 3. 保存重启。注意，挂载点不能为用户根目录，否则后果很严重。　　
 
+## 六、修改双系统下默认启动系统
 
+1. ubuntu下：
+```
+    sudo vim /etc/default/grub
+    sudo update-grub
+```
+2. GRUB_DEFAULT=0表示默认启动第一个。
+3. GRUB_TIMEOUT=3表示等待３s后启动。
 
+## 七、权限管理
+
+1. 修改文件权限：
+  ```
+  chmod 754 myfile
+  ```
+  上式表示修改文件myfile的权限为：user只可以rwx(读，写和执行)，同group只可以rx（读和执行），other只可以w（写）。
+* r=4, w=2, x=1 分别对应read,　write，xecute
+* 7=4+2+1, 5=4+0+1, 4=4+0+0
+* 三个数字分别对应user, group, other　　　
+
+另一种方式是：
+  ```
+  chmod [ugoa] [+-=] [rwx] myfile2
+  ```
+如给文件myfile2的所有者（即user）增加可执行权限：
+  ```
+  chmod u+x myfile2
+  ```
+* u: user
+* g: group
+* o: other
+* a: all
+* +: 增加权限
+* -: 减少权限
+* =: 重置权限
+* r: read
+* w: write
+* x: xecute
 
 
 未完待续
