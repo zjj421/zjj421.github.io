@@ -17,7 +17,15 @@
   * list.count(x): 返回list中值为x的元素的个数。
   * list.sort(key=None, reverse=False): 给list中的元素按其unicode编码值排序，默认为升序。如果list中保存的不是同一类型的，则会报错。该sort()方法直接修改list，而内置函数sorted()返回一个新的排序好的list,原list并不会被改变。
   * list.reverse(): 倒转该list中的元素。
-  * list.copy(): 返回一个新的list。(Return a shallow copy of the list.)　等价于: a[:]
+  * list.copy(): 返回一个**新的**list。(Return a **shallow copy** of the list.)　等价于: a[:]
+    * 示例：
+    ```
+      a = [1, 2, 3]
+      b = [4, 5 6]
+      c = a
+      c.extend(b)  # 此时 c = [1, 2, 3, 4, 5, 6], a = [1, 2, 3, 4, 5, 6]
+    ```
+    * 如果上面 c = a 改为 c = a.copy() 或者 a[:], 则 c 和 a 是独立的２个变量。 
 * 实例：
   ```
   >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
