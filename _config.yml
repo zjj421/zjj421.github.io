@@ -26,7 +26,7 @@ ga:
   url: zjj421.github.io
 
 # default active
-active: 读书
+active: coding
 
 # 首页除了最新文章外显示分类
 # cates:
@@ -37,5 +37,5 @@ active: 读书
 locals:
   tags: 标签
   about: 关于
-  newest: 吃饭睡觉打豆豆
+  newest: 吃饭，码代码，码论文，睡觉。
   archive: 存档

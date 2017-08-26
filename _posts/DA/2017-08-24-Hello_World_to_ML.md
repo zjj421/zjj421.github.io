@@ -1,4 +1,4 @@
-# keras 手写是最识别
+# keras 手写数字识别
 
 ```
 '''Trains a simple convnet on the MNIST dataset.
@@ -42,8 +42,8 @@ for i in range(0, 4):
     plt.title(y_train[i])
 plt.show()  # IDE中需要使用plt.show()来显示图片
 
-# tensorflow的图片格式为（图片个数，图片宽度，图片高度，通道数）
-# theano的图片格式为（图片个数，通道数，图片宽度，图片高度）
+# tensorflow的图片格式为（图片个数，图片高度，图片宽度，通道数）
+# theano的图片格式为（图片个数，通道数，图片高度10000，图片宽度）
 # 灰度图片的通道数为１，
 if K.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 1, img_rows, img_cols)
@@ -57,7 +57,7 @@ else:
 # 数据类型转为float32，结果更精确．
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
-# 归一化　每一个通道的数据值为0-255，0表示白色，255表示黑色
+# 归一化　每一个通道的数据值为0-255，0表示黑色，255表示白色
 x_train /= 255
 x_test /= 255
 print('x_train shape:', x_train.shape)
@@ -165,5 +165,4 @@ print("metrics_name: ", model.metrics_names)
 
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-
 ```
