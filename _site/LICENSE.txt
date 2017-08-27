@@ -1,5 +1,0 @@
-Jekyll template is a copy of http://ichennan.com
-
-Content written by Michael Zhang
-
-License: MIT
