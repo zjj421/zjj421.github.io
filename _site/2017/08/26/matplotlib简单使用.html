@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Matplotlib简单使用 | Michael Zhang</title>
+<meta name="author" content="Michael Zhang">
+
+
+<link rel="shortcut icon" href="/public/img/deer3.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/public/css/bootstrap.css">
+<link rel="stylesheet" href="/public/css/font-awesome.css">
+<link rel="stylesheet" href="/public/js/prettify/prettify.css">
+<link rel="stylesheet" href="/public/css/base.css">
+<link href="/pages/atom.xml" rel="alternate" title="Michael Zhang" type="application/atom+xml">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 col-sm-13 col-xs-13 aside visible-md visible-lg">
+  <div class="row">
+    <div class="col-md-2 col-xs-2 aside1">
+      <br>
+      <a class="pjaxlink" href="/"><img src="/public/img/deer3.png" class="img-ronuded avatar" style="border-width:0px; border-color:#000"></a>
+      <br><br><br><br>
+      <ul class="nav nav-pills nav-stacked" id="ul_category">
+        <!-- collect all categories -->
+        
+         <li><a href="#Linux" data-toggle="tab">Linux</a></li>
+        
+         <li><a href="#软件使用" data-toggle="tab">软件使用</a></li>
+        
+         <li><a href="#环境搭建" data-toggle="tab">环境搭建</a></li>
+        
+        <li><a data-toggle="tab" href="#tags">标签</a></li>
+      </ul>
+      <div class="aside1_bottom">
+        <ul class="nav nav-pills nav-stacked" id="ul_about">
+          <li><a class="pjaxlink" href="/pages/archive.html">存档</a></li>
+          <li><a class="pjaxlink" href="/pages/about.html">关于</a></li>
+        </ul>
+          <table class="table table-condensed">
+          <tr>
+            <td><a href="mailto:zjj421work@163.com"><i class="fa fa-envelope-o fa-lg" style="color:#fff;"></i></a></td>
+            <td><a href="http://github.com/zjj421" target="_blank"><i class="fa fa-github fa-lg" style="color:#fff;"></i></a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-10 col-xs-10 aside2" id="div_tab">
+      <div class="row">
+        <div class="tab-content">
+          
+            <div class="tab-pane" id="Linux">
+              <div class="list-group">
+                <!-- collect all articles under this category -->
+                
+                  <a href="/2017/08/06/Basic_knowledge_of_Linux.html" class="list-group-item-terry pjaxlink">Basic knowledge of Linux</a>
+                
+                  <a href="/2017/08/05/ubuntu16.04%E8%BF%9E%E6%8E%A5AWS-EC2.html" class="list-group-item-terry pjaxlink">ubuntu16.04连接AWS EC2</a>
+                
+                  <a href="/2017/08/04/Ubuntu16.04%E5%AE%89%E8%A3%85node.js.html" class="list-group-item-terry pjaxlink">Ubuntu16.04 安装node.js并配置</a>
+                
+              </div>
+            </div>
+          
+            <div class="tab-pane" id="软件使用">
+              <div class="list-group">
+                <!-- collect all articles under this category -->
+                
+                  <a href="/2017/08/05/Atom%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.html" class="list-group-item-terry pjaxlink">Atom简单使用</a>
+                
+              </div>
+            </div>
+          
+            <div class="tab-pane" id="环境搭建">
+              <div class="list-group">
+                <!-- collect all articles under this category -->
+                
+                  <a href="/2017/08/06/ubuntu16.04%E5%AE%89%E8%A3%85gpu%E7%89%88tensorflow-keras.html" class="list-group-item-terry pjaxlink">ubuntu16.04安装gpu版tensorflow＋keras</a>
+                
+              </div>
+            </div>
+          
+          <div class="tab-pane" id="tags">
+            <div class="panel-group" id="accordion">
+              <!-- collect all tags -->
+              
+                <div class="panel panel-info panel-terry">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#Linux">Linux</a>
+                      <span class="badge pull-right">3</span>
+                    </h4>
+                  </div>
+                  <div id="Linux" class="panel-collapse collapse">
+                    <!-- collect all articles with this tag -->
+                    
+                      <a  href='/2017/08/06/Basic_knowledge_of_Linux.html' class="list-group-item-terry  pjaxlink">
+                        Basic knowledge of Linux
+                      </a>
+                    
+                      <a  href='/2017/08/05/ubuntu16.04%E8%BF%9E%E6%8E%A5AWS-EC2.html' class="list-group-item-terry  pjaxlink">
+                        ubuntu16.04连接AWS EC2
+                      </a>
+                    
+                      <a  href='/2017/08/04/Ubuntu16.04%E5%AE%89%E8%A3%85node.js.html' class="list-group-item-terry  pjaxlink">
+                        Ubuntu16.04 安装node.js并配置
+                      </a>
+                    
+                  </div>
+                </div>
+              
+                <div class="panel panel-info panel-terry">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#软件使用">软件使用</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="软件使用" class="panel-collapse collapse">
+                    <!-- collect all articles with this tag -->
+                    
+                      <a  href='/2017/08/05/Atom%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.html' class="list-group-item-terry  pjaxlink">
+                        Atom简单使用
+                      </a>
+                    
+                  </div>
+                </div>
+              
+                <div class="panel panel-info panel-terry">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#环境搭建">环境搭建</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="环境搭建" class="panel-collapse collapse">
+                    <!-- collect all articles with this tag -->
+                    
+                      <a  href='/2017/08/06/ubuntu16.04%E5%AE%89%E8%A3%85gpu%E7%89%88tensorflow-keras.html' class="list-group-item-terry  pjaxlink">
+                        ubuntu16.04安装gpu版tensorflow＋keras
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-13 col-lg-13 col-sm-13 col-xs-13 aside3">
+        <div id="container">
+          <div id="pjax">
+            <div class="row">
+  <div class="col-md-13 aside3-title">
+    <br>
+    <h2 id="#identifier">Matplotlib简单使用</h2>
+    <p class="text-right">2017-08-26</p>
+  </div>
+  <div class="col-md-13 aside3-content">
+    <div id="content">
+      <h1 id="python画图工具matplotlib简单使用">Python画图工具matplotlib简单使用</h1>
+
+<h2 id="官网介绍"><a href="https://matplotlib.org/">官网</a>介绍：</h2>
+<p>Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.</p>
+
+<h2 id="简单使用">简单使用</h2>
+
+<blockquote>
+  <p>anaconda自带matplotlib模块。</p>
+</blockquote>
+
+<h3 id="制图初步">制图初步</h3>
+
+<ol>
+  <li>将函数转化成关于X, Y, Z坐标点的数组；</li>
+  <li>利用np.arange进行采样；</li>
+  <li>利用采样点，np.函数计算对应的函数值；</li>
+  <li>数据全部以np.array表达。</li>
+</ol>
+
+<h3 id="数据的快速产生">数据的快速产生</h3>
+
+<ul>
+  <li>arange函数进行采样</li>
+  <li>linspace函数指定开始值、终值和元素个数来成创建一维数组。
+可以通过endpoint=True关键字指定是否包括终值。</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; np.arange(0, 10, 1)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+In [3]: np.linspace(1,10,10)
+Out[3]: array([  1.,   2.,   3.,   4.,   5.,   6.,   7.,   8.,   9.,  10.])
+
+In [4]: np.linspace(1,10,10, endpoint=False)
+Out[4]: array([ 1. ,  1.9,  2.8,  3.7,  4.6,  5.5,  6.4,  7.3,  8.2,  9.1])
+
+</code></pre>
+</div>
+
+<ul>
+  <li>numpy提供了大量函数，计算速度快
+```
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.arange(-np.pi, np.pi, 0.1)
+y = np.sin(x)
+plt.plot(x, y, ‘b’)
+plt.show()</li>
+</ul>
+
+<p>```
+<img src="assets/markdown-img-paste-20170826205737198.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>缩写</th>
+      <th>颜色</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>‘b’</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <td>‘g’</td>
+      <td>green</td>
+    </tr>
+    <tr>
+      <td>‘r’</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <td>‘c’</td>
+      <td>cyan</td>
+    </tr>
+    <tr>
+      <td>‘y’</td>
+      <td>yellow</td>
+    </tr>
+    <tr>
+      <td>‘k’</td>
+      <td>black</td>
+    </tr>
+    <tr>
+      <td>‘w’</td>
+      <td>white</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="未完待续">未完待续。。。</h3>
+
+
+    </div>
+  </div>
+  <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
+    <div class="panel panel-success">
+      <div class="panel-body" id="nav"></div>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/public/js/jquery.js"></script>
+<script type="text/javascript" src="/public/js/bootstrap.js"></script>
+<script src="/public/js/jquery.pjax.js"></script>
+<script src="/public/js/prettify/prettify.js"></script>
+<script src="/public/js/base.js"></script>
+<script>
+    $('a[href="#coding"]').tab('show');
+</script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54262064-1', 'zjj421.github.io');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
