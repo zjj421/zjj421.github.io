@@ -29,6 +29,27 @@ So in love, we fall. We're struck. We are crushed. We swoon. We burn with passio
 > extreme: 极端的  
 > violence: 暴力  
 
+They do. And they position us as the victims of unforeseen and totally unavoidable circumstances. My favorite one of these is "smitten", which is the past participle of the word "smite". And if you look this word up in the dictionary -- you will see that it can be defined as both "grievous affliction", and to be "very much in love". So I tend to associate the word "smite" with a very particular context, which is the Old Testament. In the Book of Exodus alone, there are 16 references to smiting, which is the word that Bible uses for the vengeance of an angry God.
+
+> unforeseen: 意外  
+> unavoidable: 不可避免的  
+> circumstances: 情况  
+> smitten:   
+> participle: 分词  
+> grievous affliction: 严重的痛苦  
+> the Old Testament: 《旧约》  
+> the Book of Exodus: 《出埃及记》  
+> Bible: 圣经  
+> vengeance: 复仇  
+
+Here we are using the same word to talk about love that we use to explain a plague of locusts.
+Right? So, how did this happen? How have we come to associate love with great pain and suffering? And why do we talk about this ostensibly good experience as if we are victims? These are difficult questions, but I have some theories. And to think this through, I want to focus on one metaphor in particular, which is the idea of love is madness.
+> plague: 疫，鼠疫  
+> locusts:　蝗虫  
+> ostensibly: 表面上地  
+> madness: 疯狂
+
+
 
 [1]: https://www.ted.com/talks/mandy_len_catron_a_better_way_to_talk_about_love/transcript#t-204484
 [2]: http://open.163.com/movie/2017/2/D/7/MC9FQL66A_MCA50R4D7.html

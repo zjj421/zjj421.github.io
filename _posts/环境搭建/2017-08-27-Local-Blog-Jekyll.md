@@ -93,7 +93,7 @@ in your local repository, your change will appear on the *master* branch by defa
 	Server address: http://127.0.0.1:4000
 	Server running... press ctrl-c to stop.
 	```
-3. **Congratulations**! You can preview your local Jekyll site in your web browser at http:/127.0.0.1:4000.
+3. **Congratulations**! You can preview your local Jekyll site in your web browser at http://127.0.0.1:4000.
 
 # Keeping your site up to date with the GitHub Pages gem
 
