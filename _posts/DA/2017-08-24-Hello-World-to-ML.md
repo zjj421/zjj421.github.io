@@ -43,7 +43,7 @@ for i in range(0, 4):
 plt.show()  # IDE中需要使用plt.show()来显示图片
 
 # tensorflow的图片格式为（图片个数，图片高度，图片宽度，通道数）
-# theano的图片格式为（图片个数，通道数，图片高度10000，图片宽度）
+# theano的图片格式为（图片个数，通道数，图片高度，图片宽度）
 # 灰度图片的通道数为１，
 if K.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 1, img_rows, img_cols)
@@ -106,7 +106,7 @@ model.compile(loss=keras.losses.categorical_crossentropy,
 # 由训练数据集x_train,y_train拟合模型曲线，再用验证数据集来验证模型的好坏
 
 # batch_size:整数，指定进行梯度下降时每个batch包含的样本数．
-# 训练时一个batch的样本会被就算一次梯度下降，使目标函数优化一次．
+# 训练时一个batch的样本会被计算一次梯度下降，使目标函数优化一次．
 
 # epochs:整数，训练的轮数．每个epoch会把训练集轮一遍．
 
@@ -120,6 +120,7 @@ model.compile(loss=keras.losses.categorical_crossentropy,
 # 注意validation_split的划分是在shuffle(洗，改组)之前的，因此如果数据本身是有序的，
 # 需要先手工打乱再指定validation_split，否则可能会出现验证集样本不均匀．
 
+# shuffle: boolean, whether to shuffle the training data before each epoch.
 # shuffle:布尔值或字符串，一般为布尔值，表示是否在训练过程中随即打乱输入样本的顺序．
 # 若为字符串＂batch＂，则是用来处理HDF5数据的特殊情况，它将在batch内部将数据打乱．
 
