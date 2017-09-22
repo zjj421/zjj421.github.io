@@ -31,7 +31,9 @@ description:
 
     ln -s file2 file2_softlink
 
-同样２个文件是关联的，与硬链接不同的是，软链接文件的大小为０，删除或移动原文件会影响软链接文件。
+同样２个文件是关联的，与硬链接不同的是，软链接文件的大小为0，删除或移动原文件会影响软链接文件。
+
+硬链接只能在同一个文件系统中创建，而软链接可以跨文件系统创建。
 
 ３. 此处只做了简单区分，[参考自这里](https://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link)。
 
