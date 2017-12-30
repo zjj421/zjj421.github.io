@@ -67,6 +67,8 @@ description:
 1. vim ~/.bashrc
 2. 最后一行写入：
 ```
+    alias ss="https_proxy=http://localhost:8123"
+    或者http 
     alias ss="http_proxy=http://localhost:8123"
 ```
 alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost:8123".
