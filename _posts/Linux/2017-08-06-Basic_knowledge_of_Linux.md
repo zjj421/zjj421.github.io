@@ -68,7 +68,7 @@ description:
 2. 最后一行写入：
 ```
     alias ss="https_proxy=http://localhost:8123"
-    或者http 
+    或者http代理:
     alias ss="http_proxy=http://localhost:8123"
 ```
 alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost:8123".
@@ -76,6 +76,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 ```
     例如：ss curl ip.gs　(显示当前ip的详细信息。)
 ```
+
 ### git需要重新配置代理
 
 1. socks5代理：
@@ -102,7 +103,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 ```
 3. source ~/.bashrc
 
-##　五、ubuntu和windows共享文件系统（永久）
+## 五、ubuntu和windows共享文件系统（永久）
 
 1. sudo fdisk -l 查看想要挂载的分区的设备号，如/dev/sdb1
 2. sudo vim /etc/fstab 在最后一行添加自己想要挂载的设备号，如：
