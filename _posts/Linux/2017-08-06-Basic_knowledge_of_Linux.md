@@ -108,7 +108,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 1. sudo fdisk -l 查看想要挂载的分区的设备号，如/dev/sdb1
 2. sudo vim /etc/fstab 在最后一行添加自己想要挂载的设备号，如：
 ```
-    dev/sdb1       /home/zj/dataShare      ntfs    defaults        0       0
+    /dev/sdb1       /home/zj/dataShare      ntfs    defaults        0       0
 ```    
 3. 保存重启。注意，挂载点不能为用户根目录，否则后果很严重。　　
 
@@ -133,26 +133,26 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 * 7=4+2+1, 5=4+0+1, 4=4+0+0
 * 三个数字分别对应user, group, other　　　
 
-另一种方式是：
+2. 另一种方式是：
   ```
   chmod [ugoa] [+-=] [rwx] myfile2
   ```
-如给文件myfile2的所有者（即user）增加可执行权限：
-  ```
-  chmod u+x myfile2
-  ```
-* u: user
-* g: group
-* o: other
-* a: all
-* +: 增加权限
-* -: 减少权限
-* =: 重置权限
-* r: read
-* w: write
-* x: xecute
+  - 如给文件myfile2的所有者（即user）增加可执行权限：
+    ```
+    chmod u+x myfile2
+    ```
+    * u: user
+    * g: group
+    * o: other
+    * a: all
+    * +: 增加权限
+    * -: 减少权限
+    * =: 重置权限
+    * r: read
+    * w: write
+    * x: xecute
 
-## ubuntu16.04外接显示器克隆显示
+## 八、ubuntu16.04外接显示器克隆显示
 
 - Win + P 切换，我的机器只能在“只显示主屏幕，只显示扩展屏幕，扩展显示外接屏幕”
 - 外接屏幕克隆显示
@@ -160,4 +160,4 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
   2. xrandr --- 查看当前连接的显示器
   3. xrandr --output LVDS-0 --same-as HDMI-0 --auto --- 克隆显示，自己根据主显示器设置参数。
 
-未完待续
+## 未完待续
