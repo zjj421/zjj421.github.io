@@ -141,6 +141,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
     ```
     chmod u+x myfile2
     ```
+    
     * u: user
     * g: group
     * o: other
