@@ -141,7 +141,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
     ```
     chmod u+x myfile2
     ```
-    
+
     * u: user
     * g: group
     * o: other
@@ -161,4 +161,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
   2. xrandr --- 查看当前连接的显示器
   3. xrandr --output LVDS-0 --same-as HDMI-0 --auto --- 克隆显示，自己根据主显示器设置参数。
 
+## 九、解压缩
+1. tar.gz 解压：'tar -zxvf fiel.tar.gz'
+2. tar.bz2 解压：'tar -jxvf file.tar.bz2'
 ## 未完待续
