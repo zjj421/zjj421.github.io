@@ -128,10 +128,10 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
   ```
   chmod 754 myfile
   ```
-  上式表示修改文件myfile的权限为：user只可以rwx(读，写和执行)，同group只可以rx（读和执行），other只可以w（写）。
+  上式表示修改文件myfile的权限为：user（文件所有者）只可以rwx(读，写和执行)，同group只可以rx（读和执行），other只可以r（读）。
 * r=4, w=2, x=1 分别对应read,　write，xecute
 * 7=4+2+1, 5=4+0+1, 4=4+0+0
-* 三个数字分别对应user, group, other　　　
+* 三个数字分别对应user（文件所有者）, group, other　　　
 
 2. 另一种方式是：
   ```

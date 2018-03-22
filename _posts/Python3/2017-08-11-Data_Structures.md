@@ -1,3 +1,11 @@
+---
+layout: post
+title: Python Data Structures
+category: Python3
+tags: Python3
+keywords:
+description:
+---
 # Data Structures
 
 ## List
@@ -25,7 +33,7 @@
       c = a
       c.extend(b)  # 此时 c = [1, 2, 3, 4, 5, 6], a = [1, 2, 3, 4, 5, 6]
     ```
-    * 如果上面 c = a 改为 c = a.copy() 或者 a[:], 则 c 和 a 是独立的２个变量。 
+    * 如果上面 c = a 改为 c = a.copy() 或者 a[:], 则 c 和 a 是独立的２个变量。
 * 实例：
   ```
   >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']

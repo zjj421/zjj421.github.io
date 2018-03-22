@@ -1,3 +1,11 @@
+---
+layout: post
+title: Python画图工具matplotlib简单使用
+category: Python3
+tags: Python3
+keywords:
+description:
+---
 # Python画图工具matplotlib简单使用
 
 ## [官网][1]介绍：
