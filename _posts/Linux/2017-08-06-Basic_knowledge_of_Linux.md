@@ -164,4 +164,17 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 ## 九、解压缩
 1. tar.gz 解压：'tar -zxvf fiel.tar.gz'
 2. tar.bz2 解压：'tar -jxvf file.tar.bz2'
+
+## 十、 查看目录下文件个数
+统计某文件夹下文件的个数：
+`ls -l |grep "^-"|wc -l`
+统计某文件夹下目录的个数：
+`ls -l |grep "^ｄ"|wc -l`
+统计文件夹下文件的个数，包括子文件夹里的：
+`ls -lR|grep "^-"|wc -l`
+如统计/home/han目录(包含子目录)下的所有js文件则：
+`ls -lR /home/han|grep js|wc -l 或 ls -l "/home/han"|grep "js"|wc -l`
+统计文件夹下目录的个数，包括子文件夹里的：
+`ls -lR|grep "^d"|wc -l`
+
 ## 未完待续
