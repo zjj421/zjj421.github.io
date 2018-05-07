@@ -162,19 +162,44 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
   3. xrandr --output LVDS-0 --same-as HDMI-0 --auto --- 克隆显示，自己根据主显示器设置参数。
 
 ## 九、解压缩
-1. tar.gz 解压：'tar -zxvf fiel.tar.gz'
+解压：
+1. tar.gz 解压：'tar -zxvf file.tar.gz'
 2. tar.bz2 解压：'tar -jxvf file.tar.bz2'
+3. unzip file.zip
+压缩：
+1. tar -cvf file.tar file （仅打包）
+2. tar -zcvf file.tar.gz file (打包并压缩)
+3. zip -r file.zip file
+
+### 7z
+```
+    sudo apt install 7zip-full
+    7z x file.7z (解压到当前目录)
+    7z x fiel.7z -r -onew_dir  (解压到指定目录，-r表示递归所有的子目录， -o指定解压到的目录，后面没有空格)
+    7z a -t7z compress_name.7z dirname/* (压缩指定目录下的文件， a表示添加文件或目录到压缩包，-t指定压缩类型，一般为7z，-r表示递归所有子目录)
+```
+
 
 ## 十、 查看目录下文件个数
 统计某文件夹下文件的个数：
 `ls -l |grep "^-"|wc -l`
+
 统计某文件夹下目录的个数：
 `ls -l |grep "^ｄ"|wc -l`
+
 统计文件夹下文件的个数，包括子文件夹里的：
 `ls -lR|grep "^-"|wc -l`
+
 如统计/home/han目录(包含子目录)下的所有js文件则：
 `ls -lR /home/han|grep js|wc -l 或 ls -l "/home/han"|grep "js"|wc -l`
+
 统计文件夹下目录的个数，包括子文件夹里的：
 `ls -lR|grep "^d"|wc -l`
+
+## 十一、 守护进程
+- nohup cmd &
+- 让正在运行的前台任务变为后台任务：先按`ctrl + z`暂停程序，然后执行`bg`命令（让最近一个暂停的“后台任务”继续执行。）更保险一点是再运行`disown`。
+
+通过"后台任务"启动"守护进程"并不保险，因为有的系统的huponexit参数可能是打开的（on）。执行`shopt | grep huponexit`可查看huponexit参数的值。
 
 ## 未完待续
