@@ -202,4 +202,8 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 
 通过"后台任务"启动"守护进程"并不保险，因为有的系统的huponexit参数可能是打开的（on）。执行`shopt | grep huponexit`可查看huponexit参数的值。
 
+- 让正在运行的程序后端运行，并设置退出终端不影响该程序的运行
+
+`Ctrl + z` 暂停程序， 然后 `bg %1`, 然后`disown -h %1`。
+
 ## 未完待续
