@@ -1,8 +1,8 @@
 ---
 layout: post
 title: A better way to talk about love
-category: English Learning
-tags: English Learning
+category: EnglishLearning
+tags: EnglishLearning
 keywords:
 description:
 ---
