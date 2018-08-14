@@ -60,7 +60,7 @@ description:
 输出：
 `name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}`
 
-`**extra`表示把`extra`这个dict的所有key-value用关键字参数传入到`**kw`参数，`kw`将获得一个dict，注意`kw`获得 的dict时`extra`的一份拷贝，对`kw`的改动不会影响到函数外的`extra`。
+`**extra`表示把`extra`这个dict的所有key-value用关键字参数传入到`**kw`参数，`kw`将获得一个dict，注意`kw`获得的dict是`extra`的一份拷贝，对`kw`的改动不会影响到函数外的`extra`。
 
 ## 命名关键字参数
 对于关键字参数，函数的调用者可以传入任意不受限制的关键字参数。如果要限制关键字参数的名字，就可以用命名关键字参数。
