@@ -206,4 +206,16 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 
 `Ctrl + z` 暂停程序， 然后 `bg %1`, 然后`disown -h %1`。
 
+## 十二、设置ssh免密登录ubuntu服务器
+
+机器A 登录 机器B
+
+1. 机器A生成秘钥：`ssh-keygen -t rsa`
+2. 将生成的公钥复制到机器B个人目录下的.ssh目录中：`scp rsa.pub username@ip:/home/yourpersonaldir/.ssh/`
+3. 将机器B上的公钥中的内容添加到~/.ssh目录下的authorized_keys文件中：`cat ~/.ssh/rsa.pub >> ~/.ssh/authorized_keys`
+4. 机器A终端输入：`ssh username@ip`
+5. 大功告成！
+
+
+
 ## 未完待续
