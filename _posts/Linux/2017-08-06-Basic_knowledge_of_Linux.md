@@ -166,6 +166,7 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 1. tar.gz 解压：'tar -zxvf file.tar.gz'
 2. tar.bz2 解压：'tar -jxvf file.tar.bz2'
 3. unzip file.zip
+
 压缩：
 1. tar -cvf file.tar file （仅打包）
 2. tar -zcvf file.tar.gz file (打包并压缩)
@@ -178,6 +179,15 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
     7z x fiel.7z -r -onew_dir  (解压到指定目录，-r表示递归所有的子目录， -o指定解压到的目录，后面没有空格)
     7z a -t7z compress_name.7z dirname/* (压缩指定目录下的文件， a表示添加文件或目录到压缩包，-t指定压缩类型，一般为7z，-r表示递归所有子目录)
 ```
+
+### pigz
+并行压缩工具，参考自[简书文章](https://www.jianshu.com/p/4e69716804a5)，[pigz官方文档](http://zlib.net/pigz/pigz.pdf)
+```
+压缩：tar --use-compress-program=pigz -cpvf packages.tgz packages
+
+解压： tar --use-compress-program=pigz -xvf packages.tgz
+```
+其中packages是要压缩的目录，packages.tgz是压缩后的名称。
 
 
 ## 十、 查看目录下文件个数
@@ -206,7 +216,39 @@ alias命令是设置别名用的，这里ss就代表"http_proxy=http://localhost
 
 `Ctrl + z` 暂停程序， 然后 `bg %1`, 然后`disown -h %1`。
 
-## 十二、设置ssh免密登录ubuntu服务器
+## 十二、 Screen
+参考自[这里](https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)
+
+GNU Screen是一款由GNU计划开发的用于命令行终端切换的自由软件。用户可以通过该软件同时连接多个
+本地或远程的命令行会话，并在其间自由切换。 Screen可以看做是窗口管理器的命令行界面版本。
+
+- 会话恢复
+只要Screen本身还在运行，在其内部运行的会话都可以被恢复。
+
+- 多窗口
+在Screen环境下，所有的会话都独立运行，并拥有各自的编号、输入、输出和窗口缓存。
+
+- 会话共享
+Screen可以让一个或多个用户从不同终端多次登录同一个会话，并共享会话的所有特性（比如可以看到完全相同的输出）。它同时提供了窗口访问权限的控制，可以对窗口进行密码保护。
+
+### Screen安装与简单使用
+- 安装：`sudo apt install screen`
+- 创建新窗口，并为新窗口取名：`screen -S somename`
+- 创建新窗口，并执行某些操作：`screen vim text.txt`
+screen创建了一个执行vim操作的单窗口会话，退出vim将退出该窗口会话。
+
+- 查看窗口和窗口名称：
+打开多个窗口后，可以使用快捷键`Ctrl + a + w`列出当前所有窗口。
+
+- 会话分离与恢复
+可以在不中断screen窗口中程序的运行而暂时断开（detach）screen会话，并在随后时间重新连接(attach)该会话，重新控制各窗口中运行的程序。
+ - 会话分离：`Ctrl a + d`
+ - 会话恢复：`screen -ls`查看窗口编号，然后`screen -r 编号`恢复该会话。
+
+如果在另一台机器上没有分离一个Screen会话，此时`screen -r 编号`不会发生作用，会输出"There is no screen to be resumed matching 编号"，此时可以使用下面命令强制将这个会话从它所在的终端分离，转移到新的终端上来。`screen -d`，然后再`screen -r 编号`。
+
+
+## 十三、设置ssh免密登录ubuntu服务器
 
 机器A 登录 机器B
 
