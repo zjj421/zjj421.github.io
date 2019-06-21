@@ -32,6 +32,4 @@ ssh-keygen -f googlecloudkey
 ssh -i myKey user@ip
 ```
 
-## ubuntu免密登录远程服务器
 
-下次配置时再写

@@ -256,8 +256,35 @@ screen创建了一个执行vim操作的单窗口会话，退出vim将退出该�
 2. 将生成的公钥复制到机器B个人目录下的.ssh目录中：`scp rsa.pub username@ip:/home/yourpersonaldir/.ssh/`
 3. 将机器B上的公钥中的内容添加到~/.ssh目录下的authorized_keys文件中：`cat ~/.ssh/rsa.pub >> ~/.ssh/authorized_keys`
 4. 机器A终端输入：`ssh username@ip`
-5. 大功告成！
+6. 可在本地.ssh目录下新建config文件，为用户名和ip地址添加别名:
+```
+Host  简称
+hostname 机器域名或ip
+user 用户名
+```
+7. 大功告成！
 
+## 十四、ubuntu挂载远程目录到本地
 
+[参考自这里](https://xumi1993.github.io/blog/2019/03/%E7%94%A8sshfs%E8%BF%9C%E7%A8%8B%E6%8C%82%E8%BD%BD%E8%B7%AF%E5%BE%84%E5%88%B0%E6%9C%AC%E5%9C%B0/)
+
+### 临时挂载
+1. 需要在机器1上访问机器2上的文件目录
+2. 机器1安装'sshfs': `sudo apt install sshfs`
+3. 机器1上新建映射目录（用来映射到机器2上的目录）：`mkdir local_data_map`
+4. 将机器2上的'remote_data_share'挂载到机器1上的'local_data_map'，机器1终端运行：`sshfs username2@server2:remote_data_share local_data_map`
+5. 卸载，机器1终端运行：`sudo umount local_data_map`
+
+### 永久挂载
+1. `sudo vim /etc/fstab`，添加如下内容：
+```
+sudo sshfs -o allow_other -o reconnect -o transform_symlinks -o follow_symlinks -o cache=yes remote_user@server:/path/to/mount /mnt/xxx
+
+```
+- allow_other 允许userid与服务器上userid不同的用户访问（非常重要）
+- reconnect 断线重联
+- transform_symlinks 表示转换绝对链接符号为相对链接符号
+- follow_symlinks 沿用服务器上的链接符号
+2. sudo mount -a
 
 ## 未完待续
