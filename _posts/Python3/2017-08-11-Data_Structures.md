@@ -72,7 +72,7 @@ description:
 
 * Sequence Type
 * tuplename = (1248,8421,"Hello")
-* 元组是无序的，是不可变对象，其值初始化后不能更改。但是其可以包含不可变对象，比如list,因为tuple保存的是list的name,list中元素变动，其name并不会改变。
+* 元组是有序的，是不可变对象，其值初始化后不能更改。但是其可以包含可变对象，比如list,因为tuple保存的是list的name,list中元素变动，其name并不会改变。
 * tuple由许多由逗号分割开的值组成，一般用圆括号括起来。注意包含0个或一个元素的tuple，空tuple用圆括号括起来，只含一个元素的tuple在元素后面加一个逗号。
   * empty = ()
   * singleton = ("Hello",)　　一般用括号括起来。

@@ -6,6 +6,10 @@ tags: Python3
 keywords:
 description:
 ---
+## 函数中参数传递是传值还是传引用传递？
+答案: 都不是，python中一切皆对象，函数参数是传对象，类似于赋值操作。
+
+参考[Python 函数中，参数是传值，还是传引用？](https://foofish.net/python-function-args.html)
 
 ## 位置参数，默认参数
 
