@@ -33,6 +33,13 @@ sudo vim /etc/samba/smb.conf
     read only = no
     browsable = yes
 ```
+3. 如果想修改samba服务使用的端口号，可在/etc/samba/smb.conf文件[global]中加入“smb ports = 8221“，如下所示：
+```
+#======================= Global Settings =======================
+[global]
+  smb ports = 2222 # 端口号改成我们自己想设定的
+```
+
 > [sambashare]: The name inside the brackets is the name of our share.
 
 > comment: A brief description of the share.
@@ -50,14 +57,19 @@ sudo service smbd restart
 
 ### 为Samba设置用户账号并连接到Samba共享文件系统
 
-1. 为ubuntu系统中已存在的用户设置密码：
+1. 为ubuntu系统中已存在的用户设置密码(samba服务器上操作)：
 ```
 sudo smbpasswd -a username
 ```
 > username只能时系统中已存在的用户名
 
 2. 连接共享文件系统
-  - ubuntu：打开默认文件管理器 -> 连接到服务器 -> 输入`smb://ip-address/sambashare`
-  - macOS: In the Finder menu, click GO > Connect to Server then enter: `smb://ip-address/sambashare`
+  - ubuntu：打开默认文件管理器 -> 连接到服务器 -> 输入`smb://ip-address:port/sambashare`
+  - macOS: In the Finder menu, click GO > Connect to Server then enter: `smb://ip-address:port/sambashare`
   - Windows: 打开文件管理器 -> 地址栏输入`\\ip-address\sambashare`
-> `ip-address`是Samba服务器的ip地址 sambashare时共享目录的别名。
+  > `ip-address`是Samba服务器的ip地址, `port`是samba服务使用的端口号，若没有指定端口号，可省略，`sambashare`时共享目录的别名。
+
+
+
+
+
